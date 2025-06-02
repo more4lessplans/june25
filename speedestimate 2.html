@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More4Less</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+  <link rel="manifest" href="assets/img/favicons/manifest.json">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Styles and Fonts -->
+  <link rel="stylesheet" href="vendors/swiper/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&amp;family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet">
+  <link href="assets/css/theme.min.css" rel="stylesheet">
+  <link href="assets/css/user.min.css" rel="stylesheet">
+
+  <!-- Line Icons CSS -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+  <!-- Custom CSS -->
+  <style>
+    .navbar, .navbar-nav .nav-link, .dropdown-menu, .dropdown-item, .nav-item {
+      background-color: #313C59 !important;
+    }
+
+    .nav-link, .nav-item {
+      color: rgba(255, 255, 255, 0.7) !important;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover, .nav-item:hover {
+      color: white !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md fixed-top" id="navbar" data-navbar-soft-on-scroll="data-navbar-soft-on-scroll">
+    <div class="container-fluid px-0">
+        <a href="/" class="navbar-brand"><img src="assets/img/logos/logo.png" style="width: 80px; height: 35px;" alt="logo" /></a>
+        <button class="navbar-toggler border-0 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-md-end" id="navbar-content" data-navbar-collapse="data-navbar-collapse">
+            <ul class="navbar-nav gap-md-2 gap-lg-3 pt-x1 pb-1 pt-md-0 pb-md-0" data-navbar-nav="data-navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link lh-xl dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Existing Customers</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="javascript:void(0)" data-cb-type="portal"><strong>Account Login</strong></a></li>
+                        <li><a class="dropdown-item" href="/contact"><strong>Technical Support</strong></a></li>
+                        <li><a class="dropdown-item" href="/tutorials"><strong>Tutorials</strong></a></li>
+                    </ul>
+                </li>
+               
+                <li class="nav-item"><a class="nav-link lh-xl" href="/contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link lh-xl" href="/mobility">Mobility</a></li>
+                <li class="nav-item"><a class="nav-link lh-xl" href="/question">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+ <!-- Custom CSS -->
+<style>
+  /* Basic reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Ensure the body takes up the full height */
+  html, body {
+    height: 100%;
+  }
+
+  /* Make the container flexible to take up remaining height */
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Main content area should grow to fill the space */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  /* Footer Styling */
+  footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 30px;
+  }
+
+  .footer-section p {
+    font-weight: bold;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-section ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Ensure footer is at the bottom of the page */
+  footer p {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  /* Ensure consistent padding and look on different screen sizes */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Form-specific styling */
+  .form-223076752019051 .form-container {
+    width: calc(100% - 40px); /* 20px margin on both sides */
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .form-223076752019051 .form-group,
+  .form-223076752019051 .form-group-full {
+    margin-bottom: 15px;
+  }
+
+  .form-223076752019051 input {
+    width: 100%; /* Full width for consistency */
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #e3e3e3;
+    border-radius: 12px; /* Rounded corners like coverage checker */
+    color: #222831;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle depth */
+  }
+
+  .form-223076752019051 input::placeholder {
+    color: #565656; /* Muted gray */
+    opacity: 0.7;
+  }
+
+  .form-223076752019051 input:focus {
+    border-color: #D73C59; /* Red accent on focus */
+    box-shadow: 0 0 0 3px rgba(215, 60, 89, 0.2); /* Focus ring */
+    outline: none;
+  }
+
+  .form-223076752019051 .form-group {
+    display: flex;
+    gap: 15px; /* Space between first/last name fields */
+  }
+
+  .form-223076752019051 .form-group input {
+    width: 50%; /* Split for first/last name */
+  }
+
+  .form-223076752019051 {
+    text-align: center; /* Ensures inline elements like buttons are centered */
+}
+
+.form-223076752019051 button {
+    width: 50%;
+    max-width: 400px; /* Prevents the button from stretching too wide */
+    padding: 12px 24px;
+    background-color: #2E2F33;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Ensures block-level behavior */
+    margin: 0 auto; /* Centers the button horizontally */
+}
+
+  .form-223076752019051 button:hover {
+    background-color: #313C59; /* Dark blue on hover */
+    color: white;
+  }
+
+  /* Paragraph styling to match form width */
+  .form-223076752019051-p {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    color: #666;
+  }
+</style>
+</head>
+
+<!-- Contact Section with Stylized Header -->
+<section id="pricing" style="background-color: #ffffff;">
+  <div class="container py-8 py-lg-10">
+    <!-- Header -->
+    <div class="row justify-content-center text-center py-5" style="background: linear-gradient(to right, #FFFFFF, #FFFFFF); border-radius: 10px;">
+      <div class="col-md-8 col-lg-7">
+     
+        
+        <p class="fw-medium mb-2 lh-sm text-secondary" 
+   style="max-width: 600px; margin-left: auto; margin-right: auto; text-align: center; font-size: 1.25rem; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', Arial, sans-serif;">
+   Complete this form, and we’ll provide an estimate of the internet speeds you can expect with our service, powered by major Canadian cellular networks.
+       
+      </div>
+    </div>
+
+
+    <form class="jotform-form form-223076752019051" action="https://submit.jotform.com/submit/223076752019051/" method="post" name="form_223076752019051" id="223076752019051" accept-charset="utf-8" autocomplete="on">
+      <input type="hidden" name="formID" value="223076752019051" />
+  
+      <div class="form-container">
+        <!-- Full Name Fields -->
+        <div class="form-group">
+          <input type="text" id="first_3" name="q3_name[first]" placeholder="First Name" required>
+          <input type="text" id="last_3" name="q3_name[last]" placeholder="Last Name" required>
+        </div>
+  
+        <!-- Phone Number Field -->
+        <div class="form-group-full">
+          <input type="tel" id="input_6_full" name="q6_phoneNumber[full]" placeholder="Phone Number" required>
+        </div>
+  
+        <!-- Email Field -->
+        <div class="form-group-full">
+          <input type="email" id="input_4" name="q4_email" placeholder="Email" required>
+        </div>
+  
+        <!-- Address Fields -->
+        <div class="form-group-full">
+          <input type="text" id="input_5_addr_line1" name="q5_address[addr_line1]" placeholder="Street Address" required>
+        </div>
+        <div class="form-group">
+          <input type="text" id="input_5_city" name="q5_address[city]" placeholder="City" required>
+          <input type="text" id="input_5_state" name="q5_address[state]" placeholder="Province" required>
+        </div>
+        <div class="form-group-full">
+          <input type="text" id="input_5_postal" name="q5_address[postal]" placeholder="Postal Code" required>
+        </div>
+
+        <br>  <br>
+  
+        <!-- Submit Button -->
+        <button type="submit">Get Estimate</button>
+      </div>
+    </form>
+  
+    <script type="text/javascript">
+      JotForm.ownerView = true;
+    </script>
+    <script src="https://cdn.jotfor.ms/js/vendor/smoothscroll.min.js?v=3.3.36916"></script>
+    <script src="https://cdn.jotfor.ms/js/errorNavigation.js?v=3.3.36916"></script>
+  </section>
+
+
+
+<!-- ===============================================-->
+<!--    Footer-->
+<!-- ===============================================-->
+<footer class="pt-7 pt-lg-8" style="background-color: #ffffff;">
+  <div class="container">
+    <div class="row gy-2 py-3 justify-content-center">
+      <div class="col-auto ps-0 text-center">
+        <p class="lh-xl text-1100">
+          <hr class="my-4"> <!-- Horizontal line with some margin -->
+          © <span id="currentYear"></span> Copyright, All Rights Reserved
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // JavaScript to dynamically update the year
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+
+
+    <!-- Bootstrap Bundle with Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <!-- ===============================================--><!--    JavaScripts--><!-- ===============================================-->
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const address = urlParams.get('address');
+    
+        if (address) {
+          // Decode the address and populate the form fields
+          const decodedAddress = decodeURIComponent(address);
+          
+          // Attempt to split the address into components (this is basic; you might want a more robust parser)
+          const addressParts = decodedAddress.split(', ');
+          if (addressParts.length >= 3) {
+            document.getElementById('input_5_addr_line1').value = addressParts[0] || '';
+            document.getElementById('input_5_city').value = addressParts[1] || '';
+            document.getElementById('input_5_state').value = addressParts[2] || '';
+            // Postal code might not always be present, so leave it blank if not found
+            if (addressParts[3]) {
+              document.getElementById('input_5_postal').value = addressParts[3] || '';
+            }
+          } else {
+            // If splitting fails, just put the whole address in the street field
+            document.getElementById('input_5_addr_line1').value = decodedAddress;
+          }
+        }
+      });
+    </script>
+
+    
+
+    <script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="more4lessplans" ></script>
+    <script src="vendors/popper/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/countup/countUp.umd.js"></script>
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="assets/js/theme.js"></script>
+
+
+  </body>
+
+</html>
